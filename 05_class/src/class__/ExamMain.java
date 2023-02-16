@@ -10,8 +10,49 @@ public class ExamMain {
 		System.out.println("인원수 입력 : ");
 		int cnt = scan.nextInt();
 		
+		
 		//객체배열     class생성자 복습
-
+		Exam[] ar = new Exam[cnt]; //객체 배열을 생성한 것임
+		
+		//입력 
+		for(int k=0; k<ar.length; k++) {
+			ar[k] = new Exam();
+			ar[k].compare();
+			System.out.println();
+			
+		}//for k 
+		
+		//출력 
+		System.out.println("이름 \t 1 2 3 4 5 \t 점수");
+		for(Exam e : ar) {
+			System.out.println(e.getName()+ "\t");
+			for(int i=0; i<e.getOx().length; i++) {
+				System.out.println(e.getOx()[i] + " ");
+			}//for i
+			System.out.println("\t" + e.getScore());
+		}
+		
+				
+		
+//		Exam aa = new Exam();
+//		aa.compare();
+//		//System.out.println(aa.getName() +"\t" + aa.getOx() + "\t" + aa.getScore());
+//		System.out.println("이름 \t 1 2 3 4 5 \t 점수");
+//		System.out.print(aa.getName() + "\t");
+//		for(int i=0; i<aa.getOx().length; i++) {
+//			System.out.print(aa.getOx()[i] + " ");
+//		}// for i 
+//		System.out.println("\t" + aa.getScore());
+//		
+//		Exam bb = new Exam();
+//		bb.compare();
+//		//System.out.println(aa.getName() +"\t" + aa.getOx() + "\t" + aa.getScore());
+//		System.out.println("이름 \t 1 2 3 4 5 \t 점수");
+//		System.out.print(bb.getName() + "\t");
+//		for(int i=0; i<bb.getOx().length; i++) {
+//			System.out.print(bb.getOx()[i] + " ");
+//		}// for i 
+//		System.out.println("\t" + bb.getScore());
 	}
 
 }
